@@ -16,3 +16,7 @@ class Message(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
     # Flag indicating whether the message has been read or not, defaulting to False
     read = models.BooleanField(default=False)
+
+    def mark_as_read(self):
+        self.read = True  # Mark the message as read
+        self.save()  # Save the updated message

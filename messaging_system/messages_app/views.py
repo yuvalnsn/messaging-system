@@ -21,6 +21,7 @@ class MessageListCreateAPIView(APIView):
 
     # Handler for POST requests to create a new message
     def post(self, request):
+        request.data['sender'] = request.user.id  # Assuming sender is the user id
         serializer = MessageSerializer(data=request.data)  # Deserialize incoming message data
         if serializer.is_valid():  # Check if deserialized data is valid
             serializer.save(sender=request.user)  # Save the message with the logged-in user as the sender
@@ -36,7 +37,7 @@ class UnreadMessageListAPIView(APIView):
     # Handler for GET requests to retrieve unread messages
     def get(self, request):
         unread_messages = Message.objects.filter(receiver=request.user,
-                                                 is_read=False)  # Fetch unread messages for the logged-in user
+                                                 read=False)  # Fetch unread messages for the logged-in user
         serializer = MessageSerializer(unread_messages, many=True)  # Serialize fetched messages
         return Response(serializer.data)  # Return serialized data as a response
 
@@ -73,8 +74,7 @@ class MarkMessageAsReadAPIView(APIView):
     def patch(self, request, pk):
         try:
             message = Message.objects.get(pk=pk, receiver=request.user)  # Retrieve the message for the logged-in user
-            message.is_read = True  # Mark the message as read
-            message.save()  # Save the updated message
+            message.mark_as_read()   # Mark the message as read
             serializer = MessageSerializer(message)  # Serialize the updated message
             return Response(serializer.data)  # Return serialized data as a response
         except Message.DoesNotExist:  # Handle case where message does not exist
