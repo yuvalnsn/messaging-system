@@ -16,7 +16,34 @@ class Message(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
     # Flag indicating whether the message has been read or not, defaulting to False
     read = models.BooleanField(default=False)
+    sender_deleted = models.BooleanField(default=False)
+    receiver_deleted = models.BooleanField(default=False)
 
     def mark_as_read(self):
         self.read = True  # Mark the message as read
         self.save()  # Save the updated message
+
+    def delete_for_sender(self):
+        self.sender_deleted = True
+        self.save()
+
+    def delete_for_receiver(self):
+        self.receiver_deleted = True
+        self.save()
+
+    def is_deleted_for_user(self, user):
+        if user == self.sender:
+            return self.sender_deleted
+        elif user == self.receiver:
+            return self.receiver_deleted
+        else:
+            return False
+
+# need to comment
+    def delete_for_user(self, user):
+        if user == self.sender:
+            self.delete_for_sender()
+        if user == self.receiver:
+            self.delete_for_receiver()
+        else:
+            raise ValueError("User is not authorized to delete this message")
