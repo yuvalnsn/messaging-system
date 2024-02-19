@@ -4,7 +4,7 @@ A simple REST API backend system for handling messages between users.
 
 ## Table of Contents
 
-- [IMPORTANT POINTS REGARDING ASSIGMENT](#IMPORTANT POINTS REGARDING ASSIGMENT)
+- [IMPORTANT POINTS REGARDING ASSIGMENT](#important-points-regarding-assignment)
 - [Description](#description)
 - [Installation](#installation)
 - [API Documentation](#api-documentation)
