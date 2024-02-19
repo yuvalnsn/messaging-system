@@ -11,7 +11,8 @@ A simple REST API backend system for handling messages between users.
 - [Testing](#testing)
 - [Examples and Screenshots](#examples-and-screenshots)
 
-## **IMPORTANT** POINTS REGARDING ASSIGMENT
+## IMPORTANT POINTS REGARDING ASSIGMENT
+
 1. Regarding the 'Read/Fetch message' requirement: I decided to split the logic into 2 endpoints. Instead of marking the message as 'read' as soon as it is sent back to the client, I opted to expose another endpoint for PATCH requests that acknowledge to the server that the requested message did indeed reach the client. This decision was made because I assumed that a response from the server could fail.
 
 
