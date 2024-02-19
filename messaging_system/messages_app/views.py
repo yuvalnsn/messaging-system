@@ -99,10 +99,10 @@ class MessageRetrieveUpdateDestroyAPIView(APIView):
     permission_classes = [IsAuthenticated]  # can be used only for authenticated users
 
     # Method to get the message object with given primary key
-    def get_object(self, pk):
+    def get_object(self, pk,request):
         try:
             # Getting the message object or raising 404 if not found
-            message = get_object_or_404(Message, pk=pk)
+            message = get_object_or_404(Message, Q(pk=pk), Q(receiver=request.user.id) | Q(sender=request.user.id))
             if message.is_deleted_for_user(self.request.user):
                 raise Http404("Message does not exist or has been deleted.")
             return message
@@ -112,7 +112,7 @@ class MessageRetrieveUpdateDestroyAPIView(APIView):
     # Handler for GET requests to retrieve a message
     def get(self, request, pk):
         try:
-            message = self.get_object(pk)  # Getting the message object
+            message = self.get_object(pk,request)  # Getting the message object
             serializer = MessageSerializer(message)  # Serializing the message
             return Response(serializer.data, status=status.HTTP_200_OK)  # Returning serialized data with success status
         except Http404 as e:
@@ -130,7 +130,7 @@ class MessageRetrieveUpdateDestroyAPIView(APIView):
     # Handler for DELETE requests to delete a message
     def delete(self, request, pk):
         try:
-            message = self.get_object(pk)  # Getting the message object
+            message = self.get_object(pk,request)  # Getting the message object
             message.delete_for_user(request.user)  # Deleting the message for the user
             return Response(status=status.HTTP_204_NO_CONTENT)  # Returning success response with no content
         except Http404 as e:

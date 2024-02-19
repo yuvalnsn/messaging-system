@@ -16,5 +16,5 @@ urlpatterns = [
     path('<int:pk>/', MessageRetrieveUpdateDestroyAPIView.as_view(), name='message-detail'),
     # URL pattern for marking a message as read
     path('mark-as-read/', MarkMessageAsReadAPIView.as_view(), name='mark-message-as-read'),
-    path('last-received/', LastReceivedMessageAPIView.as_view(), name='last-received-message')
+    path('last-received-message/', LastReceivedMessageAPIView.as_view(), name='last-received-message')
 ]
