@@ -1,3 +1,13 @@
+## IMPORTANT POINTS REGARDING ASSIGMENT
+
+1. Regarding the 'Read/Fetch message' requirement: I decided to split the logic into 2 endpoints. Instead of marking the message as 'read' as soon as it is sent back to the client, I opted to expose another endpoint for PATCH requests that acknowledge to the server that the requested message did indeed reach the client. This decision was made because I assumed that a response from the server could fail.
+
+
+2. I used Token authentication. For convenience, within the Postman file, I created a Token variable to store the received token after login. Additionally, I've added 'Pre-request scripts' for each request to extract the token and inject it into the headers for authorization. This is solely for the convenience of checking the assignment. Feel free to remove the scripts (though you will need to enter the token manually in order to use the endpoints).
+
+
+3. If anything is unclear, I will be more than happy to clarify.
+
 # Messaging System
 
 A simple REST API backend system for handling messages between users.
@@ -11,15 +21,6 @@ A simple REST API backend system for handling messages between users.
 - [Testing](#testing)
 - [Examples and Screenshots](#examples-and-screenshots)
 
-## IMPORTANT POINTS REGARDING ASSIGMENT
-
-1. Regarding the 'Read/Fetch message' requirement: I decided to split the logic into 2 endpoints. Instead of marking the message as 'read' as soon as it is sent back to the client, I opted to expose another endpoint for PATCH requests that acknowledge to the server that the requested message did indeed reach the client. This decision was made because I assumed that a response from the server could fail.
-
-
-2. I used Token authentication. For convenience, within the Postman file, I created a Token variable to store the received token after login. Additionally, I've added 'Pre-request scripts' for each request to extract the token and inject it into the headers for authorization. This is solely for the convenience of checking the assignment. Feel free to remove the scripts (though you will need to enter the token manually in order to use the endpoints).
-
-
-3. If anything is unclear, I will be more than happy to clarify.
 ## Description
 
 The Messaging System is a REST API backend built to facilitate communication between users. It allows users to send,
