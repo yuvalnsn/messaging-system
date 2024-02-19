@@ -45,5 +45,3 @@ class Message(models.Model):
             self.delete_for_sender()
         if user == self.receiver:
             self.delete_for_receiver()
-        else:
-            raise ValueError("User is not authorized to delete this message")

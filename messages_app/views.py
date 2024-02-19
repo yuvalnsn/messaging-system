@@ -40,8 +40,7 @@ class MessageListCreateAPIView(APIView):
             serializer = MessageSerializer(data=request.data)  # Creating serializer instance with request data
             if serializer.is_valid():  # Checking if serializer data is valid
                 serializer.save(sender=request.user)  # Saving the message with the sender as the current user
-                return Response(serializer.data,
-                                status=status.HTTP_201_CREATED)  # Returning serialized data with success status
+                return Response(status=status.HTTP_201_CREATED)  # Returning serialized data with success status
             return Response(
                 {"error": serializer.errors},
                 status=status.HTTP_400_BAD_REQUEST
@@ -99,7 +98,7 @@ class MessageRetrieveUpdateDestroyAPIView(APIView):
     permission_classes = [IsAuthenticated]  # can be used only for authenticated users
 
     # Method to get the message object with given primary key
-    def get_object(self, pk,request):
+    def get_object(self, pk, request):
         try:
             # Getting the message object or raising 404 if not found
             message = get_object_or_404(Message, Q(pk=pk), Q(receiver=request.user.id) | Q(sender=request.user.id))
@@ -112,7 +111,7 @@ class MessageRetrieveUpdateDestroyAPIView(APIView):
     # Handler for GET requests to retrieve a message
     def get(self, request, pk):
         try:
-            message = self.get_object(pk,request)  # Getting the message object
+            message = self.get_object(pk, request)  # Getting the message object
             serializer = MessageSerializer(message)  # Serializing the message
             return Response(serializer.data, status=status.HTTP_200_OK)  # Returning serialized data with success status
         except Http404 as e:
@@ -130,7 +129,7 @@ class MessageRetrieveUpdateDestroyAPIView(APIView):
     # Handler for DELETE requests to delete a message
     def delete(self, request, pk):
         try:
-            message = self.get_object(pk,request)  # Getting the message object
+            message = self.get_object(pk, request)  # Getting the message object
             message.delete_for_user(request.user)  # Deleting the message for the user
             return Response(status=status.HTTP_204_NO_CONTENT)  # Returning success response with no content
         except Http404 as e:
@@ -155,7 +154,7 @@ class MarkMessageAsReadAPIView(APIView):
         try:
             message_id = request.data.get('message_id')  # Getting the message ID from request data
             # Retrieving the message for the logged-in user
-            message = Message.objects.get(pk=message_id, receiver=request.user, receiver_deleted=False)
+            message = Message.objects.get(pk=message_id, receiver=request.user, receiver_deleted=False, read=False)
             message.mark_as_read()  # Marking the message as read
             return Response(status=status.HTTP_204_NO_CONTENT)  # Returning success response with no content
         except Message.DoesNotExist:  # Handling case where message does not exist
