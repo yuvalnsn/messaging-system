@@ -12,7 +12,8 @@
 4. In this type of app, pagination is needed. I've decided not to include it since it's not in the requirements, and I didn't want to exaggerate.
 
 
-5. You can find the POSTMAN examples file in the `documentation/Messaging System API.postman_collection.json`
+5. You can find the POSTMAN examples file in the
+`documentation/Messaging System API.postman_collection Copy.json`
 
 
 7. If anything is unclear, I will be more than happy to clarify.
