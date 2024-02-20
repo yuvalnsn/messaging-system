@@ -3,7 +3,7 @@
 1. Regarding the 'Read/Fetch message' requirement: I decided to split the logic into 2 endpoints. Instead of marking the message as 'read' as soon as it is sent back to the client, I opted to expose another endpoint for PATCH requests that acknowledge to the server that the requested message did indeed reach the client. This decision was made because I assumed that a response from the server could fail.
 
 
-2. I used Token authentication. For convenience, within the Postman file, I created a Token variable to store the received token after login automatically. Additionally, I've added 'Pre-request scripts' for each request to extract the token and inject it into the headers for authorization. This is solely for the convenience of checking the assignment. Feel free to remove the scripts (though you will need to enter the token manually in order to use the endpoints).
+2. I used Token authentication. For convenience, within the Postman file, I created a Token variable to store the received token after login automatically. Additionally, I've added 'Pre-request scripts' for each request to extract the token and inject it into the headers for authorization. This is solely for the convenience of checking the assignment, so you won't need to write the token manually in the headers in every request. Feel free to remove the scripts (though you will need to enter the token manually in order to use the endpoints).
 
 
 3. All users have the same password (attached to email)
