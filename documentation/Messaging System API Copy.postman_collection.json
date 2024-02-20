@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "653edb11-973f-4bcc-8670-d81d19da2485",
-		"name": "Messaging System API",
+		"_postman_id": "b741b77c-2475-4435-8351-d1b7c64284fe",
+		"name": "Messaging System API Copy 5",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "29370025"
 	},
@@ -28,7 +28,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\":\"dani\",\n    \"password\":\"123456789abra\"\n}",
+					"raw": "{\n    \"username\":\"yuval\",\n    \"password\":\"123456789abra\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,9 +36,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseurl}}/auth/login/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/auth/login/",
+					"protocol": "https",
 					"host": [
-						"{{baseurl}}"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"auth",
@@ -152,11 +155,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{messages/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/",
+					"protocol": "https",
 					"host": [
-						"{{messages"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
+						"messages",
 						""
 					]
 				}
@@ -253,9 +260,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseurl}}/messages/unread/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/unread/",
+					"protocol": "https",
 					"host": [
-						"{{baseurl}}"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"messages",
@@ -271,9 +281,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/messages/unread/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/unread/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -357,9 +370,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseurl}}/messages/9/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/9/",
+					"protocol": "https",
 					"host": [
-						"{{baseurl}}"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"messages",
@@ -375,9 +391,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/messages/9/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/9/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -440,9 +459,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/messages/7/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/7/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -505,9 +527,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/messages/9/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/9/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -591,9 +616,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseurl}}/messages/last-received-message/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/last-received-message/",
+					"protocol": "https",
 					"host": [
-						"{{baseurl}}"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"messages",
@@ -609,9 +637,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/messages/last-received-message/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/last-received-message/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -704,9 +735,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseurl}}/messages/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/",
+					"protocol": "https",
 					"host": [
-						"{{baseurl}}"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"messages",
@@ -730,9 +764,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/messages/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -782,7 +819,7 @@
 						}
 					],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "Validation error example",
@@ -799,9 +836,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/messages/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -884,9 +924,12 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "{{baseurl}}/messages/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/",
+					"protocol": "https",
 					"host": [
-						"{{baseurl}}"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"messages",
@@ -910,9 +953,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/messages/mark-as-read/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/mark-as-read/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -963,7 +1009,7 @@
 						}
 					],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "Trying to mark as read already-marked message",
@@ -980,9 +1026,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/messages/mark-as-read/",
+							"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/mark-as-read/",
+							"protocol": "https",
 							"host": [
-								"{{baseurl}}"
+								"messaging-system-abra-506f0fd81b2d",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"messages",
@@ -1033,7 +1082,7 @@
 						}
 					],
 					"cookie": [],
-					"body": null
+					"body": ""
 				}
 			]
 		},
@@ -1062,9 +1111,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{baseurl}}/messages/9/",
+					"raw": "https://messaging-system-abra-506f0fd81b2d.herokuapp.com/messages/9/",
+					"protocol": "https",
 					"host": [
-						"{{baseurl}}"
+						"messaging-system-abra-506f0fd81b2d",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"messages",
@@ -1133,7 +1185,7 @@
 						}
 					],
 					"cookie": [],
-					"body": null
+					"body": ""
 				},
 				{
 					"name": "Tried to delete again",
@@ -1272,10 +1324,6 @@
 		}
 	],
 	"variable": [
-		{
-			"key": "baseurl",
-			"value": "http://127.0.0.1:8000"
-		},
 		{
 			"key": "token",
 			"value": ""

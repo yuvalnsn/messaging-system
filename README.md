@@ -67,9 +67,10 @@ You can choose to use SQLite instead of posgress. Just un-comment the relevant D
 3. Create a virtual environment: `virtualenv myenv`
 4. Activate the virtual environment on windows: `myenv\Scripts\activate`
    On Unix or MacOS:`source myenv/bin/activate`
-5. Install the requirements: `python -m pip install -r requirements.txt`
-6. migrations?
-7. Run server: `python manage.py runserver`
+5. navigate to messaginf-system `cd messaging_system`
+6. Install the requirements: `python -m pip install -r requirements.txt`
+7. If needed run `python manage.py migrate` and `python manage.py makemigrations`
+8. Run server: `python manage.py runserver`
 
 ## API Documentation
 - **BASE URL**:  `https://messaging-system-abra-506f0fd81b2d.herokuapp.com`
