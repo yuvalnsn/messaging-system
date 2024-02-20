@@ -36,7 +36,7 @@ A simple REST API backend system for handling messages between users.
 The Messaging System is a REST API backend built to facilitate communication between users. It allows users to send,
 receive, read, and delete messages, as well as retrieve all messages or unread messages for a specific user.
 
-### Environment Configuration
+## Environment Configuration
 
 In order to run the server, it's necessary to have an `.env` file configured with the appropriate environment variables. Follow these steps to set up the `.env` file:
 
@@ -131,30 +131,30 @@ python manage.py test messages_app
 - **Handling Nonexistent Messages**: Tests the behavior of the API when trying to delete a message that does not exist, ensuring it returns the appropriate 404 Not Found error.
 
 
-###Examples and Screenshots
+##Examples and Screenshots
 
 ### Pre-request script:
-Used to extarct the token from virables and inject it into the header every request
+Used to extract the token from variables and inject it into the header every request
 
-![](documentation/API_screenshots_examples/Screenshot 2024-02-20 at 13.11.49.png)
+![](documentation/API_screenshots_examples/Screenshot3.png)
 
 
 ### Endpoint: `/auth/login/`
 - **HTTP Method:** POST
 
 
-![](documentation/API_screenshots_examples/Screenshot 2024-02-20 at 13.05.55.png)
+![](documentation/API_screenshots_examples/Screenshot1.png)
 
 ### Endpoint: `/messages/`
 - **HTTP Method:** GET
 
-![](documentation/API_screenshots_examples/Screenshot 2024-02-20 at 13.10.09.png)
+![](documentation/API_screenshots_examples/Screenshot2.png)
 
 ### Endpoint: `/messages/`
 - **HTTP Method:** POST
 - Send message
 
-![](documentation/API_screenshots_examples/Screenshot 2024-02-20 at 13.13.33.png)
+![](documentation/API_screenshots_examples/Screenshot4.png)
 ### Endpoint: `/messages/mark-as-read/`
 - **HTTP Method:** PATCH
 - Mark message as read
