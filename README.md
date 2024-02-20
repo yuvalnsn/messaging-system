@@ -131,7 +131,9 @@ python manage.py test messages_app
 - **Handling Nonexistent Messages**: Tests the behavior of the API when trying to delete a message that does not exist, ensuring it returns the appropriate 404 Not Found error.
 
 
-#Examples and Screenshots
+
+
+##Examples and Screenshots
 
 #### Pre-request script:
 Used to extract the token from variables and inject it into the header every request
