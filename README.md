@@ -159,11 +159,11 @@ Used to extract the token from variables and inject it into the header every req
 - **HTTP Method:** PATCH
 - Mark message as read
 
-![](documentation/API_screenshots_examples/Screenshot 2024-02-20 at 13.14.51.png)
+![](documentation/API_screenshots_examples/Screenshot5.png)
 
 
 ### Endpoint: `/messages/`
 - **HTTP Method:** DELETE
 
 
-![](documentation/API_screenshots_examples/Screenshot 2024-02-20 at 13.15.47.png)
+![](documentation/API_screenshots_examples/Screenshot6.png)
