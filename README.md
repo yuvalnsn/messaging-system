@@ -87,7 +87,7 @@ You can choose to use SQLite instead of posgress. Just un-comment the relevant D
     - Example request:
       ```json
       {
-        "receiver": 3, #int
+        "receiver": 3, //int
         "subject": "Just saying hello2",
         "message": "Hello from Yuval2"
       }
@@ -96,7 +96,7 @@ You can choose to use SQLite instead of posgress. Just un-comment the relevant D
     - Example request:
       ```json
       {
-        "message_id": 14 #int
+        "message_id": 14 //int
       }
       ```
 - **Get All Messages for a Specific User**: GET `/messages/`
@@ -131,38 +131,38 @@ python manage.py test messages_app
 - **Handling Nonexistent Messages**: Tests the behavior of the API when trying to delete a message that does not exist, ensuring it returns the appropriate 404 Not Found error.
 
 
-##Examples and Screenshots
+#Examples and Screenshots
 
-### Pre-request script:
+#### Pre-request script:
 Used to extract the token from variables and inject it into the header every request
 
 ![](documentation/API_screenshots_examples/Screenshot3.png)
 
 
-### Endpoint: `/auth/login/`
+#### Endpoint: `/auth/login/`
 - **HTTP Method:** POST
 
 
 ![](documentation/API_screenshots_examples/Screenshot1.png)
 
-### Endpoint: `/messages/`
+#### Endpoint: `/messages/`
 - **HTTP Method:** GET
 
 ![](documentation/API_screenshots_examples/Screenshot2.png)
 
-### Endpoint: `/messages/`
+#### Endpoint: `/messages/`
 - **HTTP Method:** POST
 - Send message
 
 ![](documentation/API_screenshots_examples/Screenshot4.png)
-### Endpoint: `/messages/mark-as-read/`
+#### Endpoint: `/messages/mark-as-read/`
 - **HTTP Method:** PATCH
 - Mark message as read
 
 ![](documentation/API_screenshots_examples/Screenshot5.png)
 
 
-### Endpoint: `/messages/`
+#### Endpoint: `/messages/`
 - **HTTP Method:** DELETE
 
 
