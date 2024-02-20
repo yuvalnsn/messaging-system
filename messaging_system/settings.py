@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 # from dotenv import load_dotenv
 # load_dotenv()
 from decouple import config
-
 from pathlib import Path
 import django_heroku
 
